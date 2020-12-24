@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "799798134473",
+    "project_id": "mlrit-bab00",
+    "storage_bucket": "mlrit-bab00.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799798134473:android:5a270c5135110534422f18",
+        "android_client_info": {
+          "package_name": "com.android.mlrit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799798134473-ql3jsbb36na5hvt3j92u7d0f876qtrvm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgejvZAe6kUS7TCnTYvsHXxbKstr45ks0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799798134473-ql3jsbb36na5hvt3j92u7d0f876qtrvm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

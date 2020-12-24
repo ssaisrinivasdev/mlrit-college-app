@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#181926"
+    android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    >
+
+    <com.google.android.material.navigation.NavigationView
+        android:background="#262a34"
+        app:itemIconPadding="20dp"
+        app:itemTextColor="#B6B6B6"
+        app:itemIconTint="#BFBFBF"
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:visibility="visible"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                app:title=" "
+                android:id="@+id/toolbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:minHeight="?actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                app:navigationIcon="@drawable/menu_icon" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="#B4FFFFFF"
+                android:layout_marginStart="5sp"
+                android:id="@+id/Welcome"
+                android:gravity="start"
+                android:text="Welcome,"
+                android:fontFamily="@font/robotoregular"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginEnd="30dp"
+                android:textColor="#ffffff"
+                android:id="@+id/name"
+                android:fontFamily="@font/robotblack"
+                android:layout_below="@id/Welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="35sp" />
+
+            <TextView
+                android:fontFamily="@font/robotobold"
+                android:textColor="#6B6B73"
+                android:id="@+id/roll"
+                android:textSize="20sp"
+                android:layout_below="@id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="31dp"
+                android:src="@drawable/profile" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="15dp"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="#2B2D39"
+                    app:cardCornerRadius="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/robotobold"
+                            android:text="DashBoard"
+                            android:textColor="#FFFFFF"
+                            android:textSize="25sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/clgwebsite"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="#069CCD"
+                                android:clickable="true"
+                                android:elevation="20dp"
+                                android:focusable="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                app:cardBackgroundColor="#373737"
+                                app:cardCornerRadius="20dp">
+
+                                <TextView
+                                    android:layout_marginStart="12dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start|center"
+                                    android:text="Website"
+                                    android:textColor="#ffffff"
+                                    android:textSize="18sp" />
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_gravity="end|center"
+                                    android:layout_margin="10dp"
+                                    android:background="@drawable/circlebutton"
+                                    android:src="@drawable/next_" />
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/aboutme"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="15dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="#e74c4d"
+                                android:clickable="true"
+                                android:elevation="20dp"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                app:cardCornerRadius="20dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start|center"
+                                    android:layout_marginStart="10dp"
+                                    android:text="About Me"
+                                    android:textColor="#ffffff"
+                                    android:textSize="18sp" />
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_gravity="end|center"
+                                    android:layout_margin="10dp"
+                                    android:background="@drawable/circlebutton"
+                                    android:src="@drawable/next_" />
+
+
+                            </androidx.cardview.widget.CardView>
+
+
+                        </LinearLayout>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:visibility="invisible" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/holidays"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="#029E86"
+                                android:clickable="true"
+                                android:elevation="20dp"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                app:cardCornerRadius="20dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start|center"
+                                    android:layout_margin="10dp"
+                                    android:text="Student Portal"
+                                    android:textColor="#ffffff"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_gravity="end|center"
+                                    android:layout_margin="10dp"
+                                    android:background="@drawable/circlebutton"
+                                    android:src="@drawable/next_" />
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/contactus"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="15dp"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="#ed9760"
+                                android:clickable="true"
+                                android:elevation="20dp"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                app:cardCornerRadius="20dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start|center"
+                                    android:layout_margin="10dp"
+                                    android:text="Contact Us"
+                                    android:textColor="#ffffff"
+                                    android:textSize="17.5sp" />
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_gravity="end|center"
+                                    android:layout_margin="10dp"
+                                    android:background="@drawable/circlebutton"
+                                    android:src="@drawable/next_" />
+
+
+                            </androidx.cardview.widget.CardView>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="15dp"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="#2B2D39"
+                    app:cardCornerRadius="20dp">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="#ffffff"
+                            android:fontFamily="@font/robotobold"
+                            android:textSize="25sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Important News:"
+                            />
+                        <WebView
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:id="@+id/news"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="15dp"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="#2B2D39"
+                    app:cardCornerRadius="20dp">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="#ffffff"
+                        android:fontFamily="@font/robotobold"
+                        android:textSize="25sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fee Payment"
+                        />
+
+                    <HorizontalScrollView
+                        android:layout_marginBottom="15dp"
+                        android:scrollbars="none"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/tutionfee"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:layout_marginBottom="3dp"
+                                android:layout_marginStart="20dp"
+                                app:cardCornerRadius="20dp"
+                                android:elevation="20dp"
+                                android:backgroundTint="#C17DE6"
+                                android:layout_width="200dp"
+                                android:layout_height="130dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_margin="15dp"
+                                    android:textSize="25sp"
+                                    android:text="Tution Fee"
+                                    android:textColor="#ffffff" />
+                                <ImageView
+                                    android:src="@drawable/next_"
+                                    android:background="@drawable/circlebutton"
+                                    android:layout_margin="20dp"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="bottom"
+                                    />
+
+                                <ImageView
+                                    android:layout_width="82dp"
+                                    android:layout_height="73dp"
+                                    android:layout_gravity="bottom|end"
+                                    android:src="@drawable/tution_fee" />
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/regularfee"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:layout_marginBottom="3dp"
+                                android:layout_marginStart="20dp"
+                                app:cardCornerRadius="20dp"
+                                android:elevation="20dp"
+                                android:backgroundTint="#e67d97"
+                                android:layout_width="200dp"
+                                android:layout_height="130dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_margin="15dp"
+                                    android:textSize="25sp"
+                                    android:text="Regular Fee"
+                                    android:textColor="#ffffff" />
+                                <ImageView
+                                    android:src="@drawable/next_"
+                                    android:background="@drawable/circlebutton"
+                                    android:layout_margin="20dp"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="bottom"
+                                    />
+
+                                <ImageView
+                                    android:layout_width="82dp"
+                                    android:layout_height="73dp"
+                                    android:layout_gravity="bottom|end"
+                                    android:src="@drawable/regular_fee" />
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/supplyfee"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:layout_marginBottom="3dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                app:cardCornerRadius="20dp"
+                                android:elevation="20dp"
+                                android:backgroundTint="#4c6cb5"
+                                android:layout_width="200dp"
+                                android:layout_height="130dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_margin="15dp"
+                                    android:textSize="25sp"
+                                    android:text="Supply Fee"
+                                    android:textColor="#ffffff" />
+                                <ImageView
+                                    android:src="@drawable/next_"
+                                    android:background="@drawable/circlebutton"
+                                    android:layout_margin="20dp"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="bottom"
+                                    />
+
+                                <ImageView
+                                    android:layout_width="65dp"
+                                    android:layout_height="58dp"
+                                    android:layout_gravity="bottom|end"
+                                    android:src="@drawable/supply_fee" />
+
+
+                            </androidx.cardview.widget.CardView>
+
+
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="15dp"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="#2B2D39"
+                    app:cardCornerRadius="20dp">
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="#ffffff"
+                            android:fontFamily="@font/robotobold"
+                            android:textSize="25sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Results"
+                            />
+
+                        <HorizontalScrollView
+                            android:layout_marginBottom="15dp"
+                            android:scrollbars="none"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/midmarks"
+                                    android:foreground="?android:attr/selectableItemBackground"
+                                    android:clickable="true"
+                                    android:layout_marginBottom="3dp"
+                                    android:layout_marginStart="20dp"
+                                    app:cardCornerRadius="20dp"
+                                    android:elevation="20dp"
+                                    android:backgroundTint="#efa33d"
+                                    android:layout_width="200dp"
+                                    android:layout_height="130dp">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:layout_margin="15dp"
+                                        android:textSize="25sp"
+                                        android:text="Mid Marks"
+                                        android:textColor="#ffffff" />
+                                    <ImageView
+                                        android:src="@drawable/next_"
+                                        android:background="@drawable/circlebutton"
+                                        android:layout_margin="20dp"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_gravity="bottom"
+                                        />
+
+                                    <ImageView
+                                        android:layout_width="65dp"
+                                        android:layout_height="58dp"
+                                        android:layout_gravity="bottom|end"
+                                        android:src="@drawable/mid_marks" />
+
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/internalmarks"
+                                    android:foreground="?android:attr/selectableItemBackground"
+                                    android:clickable="true"
+                                    android:layout_marginBottom="3dp"
+                                    android:layout_marginStart="20dp"
+                                    app:cardCornerRadius="20dp"
+                                    android:elevation="20dp"
+                                    android:backgroundTint="#0B7535"
+                                    android:layout_width="200dp"
+                                    android:layout_height="130dp">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:layout_margin="15dp"
+                                        android:textSize="25sp"
+                                        android:text="Internal Marks"
+                                        android:textColor="#ffffff" />
+                                    <ImageView
+                                        android:src="@drawable/next_"
+                                        android:background="@drawable/circlebutton"
+                                        android:layout_margin="20dp"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_gravity="bottom"
+                                        />
+
+                                    <ImageView
+                                        android:layout_width="65dp"
+                                        android:layout_height="58dp"
+                                        android:layout_gravity="bottom|end"
+                                        android:src="@drawable/internal_marks" />
+
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/overallmarks"
+                                    android:foreground="?android:attr/selectableItemBackground"
+                                    android:clickable="true"
+                                    android:layout_marginBottom="3dp"
+                                    android:layout_marginStart="20dp"
+                                    app:cardCornerRadius="20dp"
+                                    android:elevation="20dp"
+                                    android:backgroundTint="#7d5ef6"
+                                    android:layout_width="200dp"
+                                    android:layout_height="130dp">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:layout_margin="15dp"
+                                        android:textSize="25sp"
+                                        android:text="Overall Marks"
+                                        android:textColor="#ffffff" />
+                                    <ImageView
+                                        android:src="@drawable/next_"
+                                        android:background="@drawable/circlebutton"
+                                        android:layout_margin="20dp"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_gravity="bottom"
+                                        />
+
+                                    <ImageView
+                                        android:layout_width="65dp"
+                                        android:layout_height="58dp"
+                                        android:layout_gravity="bottom|end"
+                                        android:src="@drawable/overall_marks" />
+
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/overallmarkssemwise"
+                                    android:foreground="?android:attr/selectableItemBackground"
+                                    android:clickable="true"
+                                    android:layout_marginBottom="3dp"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginEnd="20dp"
+                                    app:cardCornerRadius="20dp"
+                                    android:elevation="20dp"
+                                    android:backgroundTint="#e58296"
+                                    android:layout_width="200dp"
+                                    android:layout_height="130dp">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:layout_margin="15dp"
+                                        android:textSize="23sp"
+                                        android:text="Overall Marks - Semwise"
+                                        android:textColor="#ffffff" />
+                                    <ImageView
+                                        android:src="@drawable/next_"
+                                        android:background="@drawable/circlebutton"
+                                        android:layout_margin="20dp"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_gravity="bottom"
+                                        />
+
+                                    <ImageView
+                                        android:layout_width="65dp"
+                                        android:layout_height="58dp"
+                                        android:layout_gravity="bottom|end"
+                                        android:src="@drawable/overall_sem_marks" />
+
+
+                                </androidx.cardview.widget.CardView>
+
+
+
+                            </LinearLayout>
+                        </HorizontalScrollView>
+
+                    </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="15dp"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="#2B2D39"
+                    app:cardCornerRadius="20dp">
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+
+                        <TextView
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="#ffffff"
+                            android:fontFamily="@font/robotobold"
+                            android:textSize="25sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hall Tickets"
+                            />
+
+                        <HorizontalScrollView
+                            android:layout_marginBottom="15dp"
+                            android:scrollbars="none"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/semhallticket"
+                                    android:foreground="?android:attr/selectableItemBackground"
+                                    android:clickable="true"
+                                    android:layout_marginBottom="3dp"
+                                    android:layout_marginStart="20dp"
+                                    app:cardCornerRadius="20dp"
+                                    android:elevation="20dp"
+                                    android:backgroundTint="#60c4c2"
+                                    android:layout_width="200dp"
+                                    android:layout_height="130dp">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:layout_margin="15dp"
+                                        android:textSize="25sp"
+                                        android:text="Sem Hallticket"
+                                        android:textColor="#ffffff" />
+                                    <ImageView
+                                        android:src="@drawable/next_"
+                                        android:background="@drawable/circlebutton"
+                                        android:layout_margin="20dp"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_gravity="bottom"
+                                        />
+
+                                    <ImageView
+                                        android:layout_width="65dp"
+                                        android:layout_height="58dp"
+                                        android:layout_gravity="bottom|end"
+                                        android:src="@drawable/sem_hallticket" />
+
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/internalhallticket"
+                                    android:foreground="?android:attr/selectableItemBackground"
+                                    android:clickable="true"
+                                    android:layout_marginBottom="3dp"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginEnd="20dp"
+                                    app:cardCornerRadius="20dp"
+                                    android:elevation="20dp"
+                                    android:backgroundTint="#9569fe"
+                                    android:layout_width="200dp"
+                                    android:layout_height="130dp">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:layout_margin="15dp"
+                                        android:textSize="25sp"
+                                        android:text="Internal Hallticket"
+                                        android:textColor="#ffffff" />
+                                    <ImageView
+                                        android:src="@drawable/next_"
+                                        android:background="@drawable/circlebutton"
+                                        android:layout_margin="20dp"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_gravity="bottom"
+                                        />
+
+                                    <ImageView
+                                        android:layout_width="65dp"
+                                        android:layout_height="58dp"
+                                        android:layout_gravity="bottom|end"
+                                        android:src="@drawable/internal_hallticket" />
+
+
+                                </androidx.cardview.widget.CardView>
+
+
+
+                            </LinearLayout>
+                        </HorizontalScrollView>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+
+
+    </LinearLayout>
+    </ScrollView>
+
+</androidx.drawerlayout.widget.DrawerLayout>
